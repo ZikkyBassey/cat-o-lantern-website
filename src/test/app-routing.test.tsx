@@ -17,7 +17,9 @@ describe("App routing", () => {
   });
 
   it("keeps the CAT O’LANTERN homepage at the root route", async () => {
-    expect(indexRoute.options.head?.({} as never)?.meta).toEqual(
+    const head = await indexRoute.options.head?.({} as never);
+
+    expect(head?.meta).toEqual(
       expect.arrayContaining([
         expect.objectContaining({ title: "CAT O’LANTERN ($CATO) — The Real King of Halloween" }),
       ]),
