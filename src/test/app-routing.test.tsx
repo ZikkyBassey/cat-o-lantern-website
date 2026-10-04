@@ -14,4 +14,15 @@ describe("App routing", () => {
 
     expect(matches.at(-1)?.routeId).not.toBe(rootRouteId);
   });
+
+  it("keeps the CAT O’LANTERN homepage at the root route", async () => {
+    const indexRoute = routeTree.children?.find((route) => route.id === "/");
+
+    expect(indexRoute).toBeDefined();
+    expect(indexRoute?.options.head?.({} as never)?.meta).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({ title: "CAT O’LANTERN ($CATO) — The Real King of Halloween" }),
+      ]),
+    );
+  });
 });
