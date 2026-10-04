@@ -3,6 +3,7 @@ import { createRouter, rootRouteId } from "@tanstack/react-router";
 import { describe, expect, it } from "vitest";
 
 import { routeTree } from "@/routeTree.gen";
+import { Route as indexRoute } from "@/routes/index";
 
 // Match routes without running loaders or rendering: loaders may need a server or
 // network the test run lacks, and jsdom never loads the stylesheets React waits on.
@@ -13,5 +14,15 @@ describe("App routing", () => {
     const matches = router.matchRoutes("/");
 
     expect(matches.at(-1)?.routeId).not.toBe(rootRouteId);
+  });
+
+  it("keeps the CAT O’LANTERN homepage at the root route", async () => {
+    const head = await indexRoute.options.head?.({} as never);
+
+    expect(head?.meta).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({ title: "CAT O’LANTERN ($CATO) — The Real King of Halloween" }),
+      ]),
+    );
   });
 });
