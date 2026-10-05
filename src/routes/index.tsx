@@ -15,12 +15,12 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 
-import heroImage from "@/assets/cato-hero.jpg";
-import loreImage from "@/assets/cato-lore.jpg";
+import fullArtwork from "@/assets/cat-o-lantern-full.png.asset.json";
+import graffitiArtwork from "@/assets/cato-graffiti.jpg.asset.json";
 import merchCapAsset from "@/assets/merch-cap.png.asset.json";
 import merchHoodieAsset from "@/assets/merch-hoodie.png.asset.json";
 import merchTeeAsset from "@/assets/merch-tee.png.asset.json";
-import tokenImage from "@/assets/cato-token.jpg";
+import brandArtwork from "@/assets/cat-o-lantern-hero.png.asset.json";
 import { Button } from "@/components/ui/button";
 
 const CONTRACT = "GeNwBZWJcWQAkLDdty7geii9xSjtCuga1qE9DDzLpump";
