@@ -17,7 +17,9 @@ import { useState } from "react";
 
 import heroImage from "@/assets/cato-hero.jpg";
 import loreImage from "@/assets/cato-lore.jpg";
-import merchImage from "@/assets/cato-merch.jpg";
+import merchCapAsset from "@/assets/merch-cap.png.asset.json";
+import merchHoodieAsset from "@/assets/merch-hoodie.png.asset.json";
+import merchTeeAsset from "@/assets/merch-tee.png.asset.json";
 import tokenImage from "@/assets/cato-token.jpg";
 import { Button } from "@/components/ui/button";
 
@@ -39,7 +41,11 @@ const featureItems = [
   ["05", "Community", "The coven gathers", "Cat lovers, Halloween devotees, and believers together."],
 ];
 
-const merchItems = ["Hoodie + Ski Mask", "Midnight Hoodie", "CATO Shirt", "Embroidered Cap"];
+const merchItems = [
+  { name: "Midnight Hoodie", image: merchHoodieAsset, alt: "Black CAT O’LANTERN hoodie with green drip logo and embroidered pumpkin" },
+  { name: "CATO Tee", image: merchTeeAsset, alt: "Black CAT O’LANTERN t-shirt with dripping green logo" },
+  { name: "Embroidered Cap", image: merchCapAsset, alt: "Black CAT O’LANTERN cap with embroidered glowing pumpkin" },
+];
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -202,16 +208,19 @@ function Index() {
         </section>
 
         <section id="merch" className="section page-width">
-          <div className="merch-panel">
-            <div className="merch-image-wrap">
-              <img src={merchImage} alt="Black CAT O’LANTERN hoodie, shirt, ski mask, and cap" loading="lazy" width={1408} height={912} />
-              <span className="coming-tag">Coming soon</span>
-            </div>
-            <div className="merch-copy">
-              <p className="eyebrow">Wear the night</p><h2>The first drop is coming.</h2>
-              <p>Four pieces. All black. Marked for those who know who really rules Halloween.</p>
-              <ul>{merchItems.map((item, index) => <li key={item}><span>0{index + 1}</span>{item}</li>)}</ul>
-            </div>
+          <div className="section-heading compact">
+            <div><p className="eyebrow">Wear the night</p><h2>The first drop is coming.</h2></div>
+            <p>Three pieces. All black. Marked for those who know who really rules Halloween.</p>
+          </div>
+          <div className="merch-grid">
+            {merchItems.map(({ name, image, alt }, index) => (
+              <article className="merch-card" key={name}>
+                <img src={image.url} alt={alt} loading="lazy" />
+                <div className="merch-card-body">
+                  <h3>{name}</h3><span>0{index + 1} · Coming soon</span>
+                </div>
+              </article>
+            ))}
           </div>
         </section>
 
