@@ -124,7 +124,7 @@ function Index() {
 
       <main>
         <section className="hero-section" aria-labelledby="hero-title">
-          <img src={heroImage} alt="A regal black cat seated on a glowing jack-o'-lantern throne" width={1920} height={1088} className="hero-image" />
+          <img src={fullArtwork.url} alt="A menacing black cat with a glowing jack-o'-lantern grin under a blood moon" width={1868} height={1242} className="hero-image" />
           <div className="hero-shade" />
           <div className="hero-content page-width">
             <p className="eyebrow hero-kicker"><span aria-hidden="true" /> Live on Solana · Halloween royalty</p>
@@ -160,7 +160,7 @@ function Index() {
           </div>
           <div className="lore-layout">
             <div className="image-panel">
-              <img src={loreImage} alt="A black cat prowling a moonlit gothic cemetery" loading="lazy" width={1408} height={912} />
+              <img src={graffitiArtwork.url} alt="Graffiti art of a black cat with an orange jack-o'-lantern grin on a black brick wall" loading="lazy" width={784} height={1168} />
               <div className="image-caption"><span>01 / THE ORIGIN</span><strong>The night belongs to those who see in the dark.</strong></div>
             </div>
             <div className="about-grid">
@@ -188,7 +188,7 @@ function Index() {
               </div>
             </div>
             <div className="token-visual">
-              <img src={tokenImage} alt="An obsidian CAT O’LANTERN token glowing among embers" loading="lazy" width={1408} height={912} />
+              <img src={brandArtwork.url} alt="CAT O’LANTERN artwork: a grinning black cat beside the $CATO on Solana crest" loading="lazy" width={1842} height={1058} style={{ objectPosition: "72% center" }} />
               <div className="token-seal"><span>Built on</span><strong>SOLANA</strong></div>
             </div>
           </div>
