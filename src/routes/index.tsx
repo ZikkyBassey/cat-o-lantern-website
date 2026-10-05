@@ -121,8 +121,8 @@ function Index() {
           <img src={heroImage} alt="A regal black cat seated on a glowing jack-o'-lantern throne" width={1920} height={1088} className="hero-image" />
           <div className="hero-shade" />
           <div className="hero-content page-width">
-            <p className="eyebrow">Halloween royalty · Solana born</p>
-            <h1 id="hero-title">THE REAL KING<br />OF HALLOWEEN</h1>
+            <p className="eyebrow hero-kicker"><span aria-hidden="true" /> Live on Solana · Halloween royalty</p>
+            <h1 id="hero-title">THE REAL <span>KING</span><br />OF HALLOWEEN</h1>
             <p className="hero-copy">Every year they carve pumpkins and pretend that’s the holiday. Wrong. The real king has always been the black cat.</p>
             <div className="hero-actions">
               <ExternalButton href={BUY_URL}>Buy $CATO <ArrowUpRight /></ExternalButton>
@@ -138,11 +138,12 @@ function Index() {
               </Button>
               <strong aria-live="polite">{copied ? "Copied" : "Solana SPL"}</strong>
             </div>
+            <a href="#about" className="scroll-cue">Enter the story <ChevronRight aria-hidden="true" /></a>
           </div>
           <div className="hero-stats page-width" aria-label="Community statistics">
-            <div><strong>75</strong><span>Community members</span></div>
-            <div><strong>95</strong><span>Token holders</span></div>
-            <div><strong>$CATO</strong><span>Forever prowling</span></div>
+            <div><small>01</small><strong>75</strong><span>Community members</span></div>
+            <div><small>02</small><strong>95</strong><span>Token holders</span></div>
+            <div><small>03</small><strong>$CATO</strong><span>Forever prowling</span></div>
           </div>
         </section>
 
