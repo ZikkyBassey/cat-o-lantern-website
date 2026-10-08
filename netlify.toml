@@ -1,0 +1,9 @@
+[build]
+  command = "bun run build"
+  publish = "dist"
+
+# Serve index.html for client-side (TanStack Router) routes
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
