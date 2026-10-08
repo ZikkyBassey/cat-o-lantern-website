@@ -13,14 +13,15 @@ import {
   X,
   Zap,
 } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
-import fullArtwork from "@/assets/cat-o-lantern-full.png.asset.json";
-import graffitiArtwork from "@/assets/cato-graffiti.jpg.asset.json";
-import merchCapAsset from "@/assets/merch-cap.png.asset.json";
-import merchHoodieAsset from "@/assets/merch-hoodie.png.asset.json";
-import merchTeeAsset from "@/assets/merch-tee.png.asset.json";
-import brandArtwork from "@/assets/cat-o-lantern-hero.png.asset.json";
+import fullArtwork from "@/assets/cat-o-lantern-full.jpg.asset.json";
+import graffitiArtwork from "@/assets/graffiti-wall.png.asset.json";
+import merchHoodieAsset from "@/assets/hoodie-mockup.png.asset.json";
+import merchCapAsset from "@/assets/merch4.png.asset.json";
+import merchTeeAsset from "@/assets/merch3.png.asset.json";
+import merch2Asset from "@/assets/merch2.png.asset.json";
+import brandArtwork from "@/assets/hero-brand.png.asset.json";
 import { Button } from "@/components/ui/button";
 
 const CONTRACT = "GeNwBZWJcWQAkLDdty7geii9xSjtCuga1qE9DDzLpump";
@@ -42,17 +43,18 @@ const featureItems = [
 ];
 
 const merchItems = [
-  { name: "Midnight Hoodie", image: merchHoodieAsset, alt: "Black CAT O’LANTERN hoodie with green drip logo and embroidered pumpkin" },
-  { name: "CATO Tee", image: merchTeeAsset, alt: "Black CAT O’LANTERN t-shirt with dripping green logo" },
-  { name: "Embroidered Cap", image: merchCapAsset, alt: "Black CAT O’LANTERN cap with embroidered glowing pumpkin" },
+  { name: "Midnight Hoodie", image: merchHoodieAsset, alt: "Black CAT O'LANTERN hoodie with exclusive streetwear design" },
+  { name: "Premium Jacket", image: merch2Asset, alt: "Black CAT O'LANTERN premium jacket with Halloween vibes" },
+  { name: "CATO Tee", image: merchTeeAsset, alt: "Black CAT O'LANTERN t-shirt with dripping green logo" },
+  { name: "Embroidered Cap", image: merchCapAsset, alt: "Black CAT O'LANTERN cap with embroidered glowing pumpkin" },
 ];
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "CAT O’LANTERN ($CATO) — The Real King of Halloween" },
-      { name: "description", content: "Meet CAT O’LANTERN, the community-driven Halloween token prowling the Solana blockchain." },
-      { property: "og:title", content: "CAT O’LANTERN ($CATO)" },
+      { title: "CAT O'LANTERN ($CATO) — The Real King of Halloween" },
+      { name: "description", content: "Meet CAT O'LANTERN, the community-driven Halloween token prowling the Solana blockchain." },
+      { property: "og:title", content: "CAT O'LANTERN ($CATO)" },
       { property: "og:description", content: "The real king of Halloween is prowling Solana." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -63,9 +65,9 @@ export const Route = createFileRoute("/")({
 
 function BrandMark() {
   return (
-    <a href="#top" className="brand-mark" aria-label="CAT O’LANTERN home">
+    <a href="#top" className="brand-mark" aria-label="CAT O'LANTERN home">
       <span className="brand-cat" aria-hidden="true">◢</span>
-      <span>CAT O’LANTERN</span>
+      <span>CAT O'LANTERN</span>
     </a>
   );
 }
@@ -81,6 +83,27 @@ function ExternalButton({ href, children, variant = "default" }: { href: string;
 function Index() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [copied, setCopied] = useState(false);
+
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+      observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   const copyContract = async () => {
     await navigator.clipboard.writeText(CONTRACT);
@@ -126,10 +149,16 @@ function Index() {
         <section className="hero-section" aria-labelledby="hero-title">
           <img src={fullArtwork.url} alt="A menacing black cat with a glowing jack-o'-lantern grin under a blood moon" width={1868} height={1242} className="hero-image" />
           <div className="hero-shade" />
+          <div className="cat-eyes" aria-hidden="true">
+            <div className="cat-eye-glow cat-eye-glow-left"></div>
+            <div className="cat-eye-glow cat-eye-glow-right"></div>
+            <div className="cat-eye cat-eye-left"></div>
+            <div className="cat-eye cat-eye-right double-blink"></div>
+          </div>
           <div className="hero-content page-width">
             <p className="eyebrow hero-kicker"><span aria-hidden="true" /> Live on Solana · Halloween royalty</p>
             <h1 id="hero-title">THE REAL <span>KING</span><br />OF HALLOWEEN</h1>
-            <p className="hero-copy">Every year they carve pumpkins and pretend that’s the holiday. Wrong. The real king has always been the black cat.</p>
+            <p className="hero-copy">Every year they carve pumpkins and pretend that's the holiday. Wrong. The real king has always been the black cat.</p>
             <div className="hero-actions">
               <ExternalButton href={BUY_URL}>Buy $CATO <ArrowUpRight /></ExternalButton>
               <ExternalButton href="https://t.me/CatOLantern" variant="outline"><Send /> Join Telegram</ExternalButton>
@@ -156,7 +185,7 @@ function Index() {
         <section id="about" className="section page-width">
           <div className="section-heading">
             <div><p className="eyebrow">Enter the lore</p><h2>Born in the shadows.</h2></div>
-            <p>Not another pumpkin in the patch. CAT O’LANTERN is a community-powered Halloween icon built for the speed of Solana.</p>
+            <p>Not another pumpkin in the patch. CAT O'LANTERN is a community-powered Halloween icon built for the speed of Solana.</p>
           </div>
           <div className="lore-layout">
             <div className="image-panel">
@@ -188,19 +217,19 @@ function Index() {
               </div>
             </div>
             <div className="token-visual">
-              <img src={brandArtwork.url} alt="CAT O’LANTERN artwork: a grinning black cat beside the $CATO on Solana crest" loading="lazy" width={1842} height={1058} style={{ objectPosition: "72% center" }} />
+              <img src={brandArtwork.url} alt="CAT O'LANTERN artwork: a grinning black cat beside the $CATO on Solana crest" loading="lazy" width={1842} height={1058} style={{ objectPosition: "72% center" }} />
               <div className="token-seal"><span>Built on</span><strong>SOLANA</strong></div>
             </div>
           </div>
         </section>
 
         <section id="features" className="section page-width">
-          <div className="section-heading compact">
+          <div className="section-heading compact animate-on-scroll">
             <div><p className="eyebrow">Why $CATO</p><h2>Five lives. One mission.</h2></div>
           </div>
           <div className="feature-list">
-            {featureItems.map(([number, label, title, copy]) => (
-              <article className="feature-row" key={number}>
+            {featureItems.map(([number, label, title, copy], index) => (
+              <article className="feature-row animate-on-scroll" key={number} style={{ animationDelay: `${index * 0.1}s` }}>
                 <span>{number}</span><small>{label}</small><h3>{title}</h3><p>{copy}</p><ChevronRight aria-hidden="true" />
               </article>
             ))}
@@ -208,9 +237,9 @@ function Index() {
         </section>
 
         <section id="merch" className="section page-width">
-          <div className="section-heading compact">
+          <div className="section-heading compact animate-on-scroll">
             <div><p className="eyebrow">Wear the night</p><h2>The first drop is coming.</h2></div>
-            <p>Three pieces. All black. Marked for those who know who really rules Halloween.</p>
+            <p>Four pieces. All black. Marked for those who know who really rules Halloween.</p>
           </div>
           <div className="merch-grid">
             {merchItems.map(({ name, image, alt }, index) => (
@@ -241,7 +270,7 @@ function Index() {
         <div className="page-width footer-inner">
           <BrandMark />
           <p>$CATO is a community token. Crypto assets are volatile; do your own research.</p>
-          <span>© 2026 CAT O’LANTERN</span>
+          <span>© 2026 CAT O'LANTERN</span>
         </div>
       </footer>
     </div>

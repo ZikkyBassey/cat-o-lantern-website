@@ -1,24 +1,31 @@
-# Your Awesome Website
+# CAT O'LANTERN Website
 
-yooo need a website,with this design .
-
-This project was built with [Lovable](https://lovable.dev).
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/bc48c36a-fac7-4986-9209-b9df38550ae8).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+The real king of Halloween - a community-driven Halloween token on Solana.
 
 ## Development
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+This project uses Bun for package management and TanStack Start for the framework.
+
+### Prerequisites
+
+- Bun - [install from bun.sh](https://bun.sh)
+
+### Getting Started
 
 ```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
+# Install dependencies
+bun install
+
+# Start development server
+bun run dev
+
+# Build for production
+bun run build
 ```
+
+## Tech Stack
+
+- **Framework**: TanStack Start (React + TanStack Router)
+- **Styling**: Tailwind CSS v4
+- **Runtime**: Bun
+- **Deployment**: Nitro (Cloudflare Workers)
