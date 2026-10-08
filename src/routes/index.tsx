@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import {
   ArrowUpRight,
+  BarChart3,
   Check,
   ChevronRight,
   Copy,
@@ -26,6 +27,9 @@ import { Button } from "@/components/ui/button";
 
 const CONTRACT = "GeNwBZWJcWQAkLDdty7geii9xSjtCuga1qE9DDzLpump";
 const BUY_URL = `https://pump.fun/coin/${CONTRACT}`;
+const DEX_URL = "https://dexscreener.com/solana/8gcu12ppfgqcrjdncjck1j29zd5hhsuueu7puu3plhvc";
+const TELEGRAM_URL = "https://t.me/CatOLantern";
+const X_URL = "https://x.com/catolanternsol?s=11";
 
 const aboutItems = [
   { icon: Sparkles, title: "Black Cat Energy", copy: "The true symbol of Halloween has watched from the shadows for centuries." },
@@ -123,8 +127,9 @@ function Index() {
             <a href="#tokenomics" onClick={closeMenu}>Tokenomics</a>
             <a href="#features" onClick={closeMenu}>Features</a>
             <a href="#merch" onClick={closeMenu}>Merch</a>
-            <a href="https://x.com/catolanternsol?s=11" target="_blank" rel="noreferrer">X / Twitter</a>
-            <a href="https://t.me/CatOLantern" target="_blank" rel="noreferrer">Telegram</a>
+            <a href={DEX_URL} target="_blank" rel="noreferrer">DEX Chart</a>
+            <a href={X_URL} target="_blank" rel="noreferrer">X / Twitter</a>
+            <a href={TELEGRAM_URL} target="_blank" rel="noreferrer">Telegram</a>
           </nav>
           <div className="nav-actions">
             <Button asChild size="sm" className="nav-buy">
@@ -161,7 +166,7 @@ function Index() {
             <p className="hero-copy">Every year they carve pumpkins and pretend that's the holiday. Wrong. The real king has always been the black cat.</p>
             <div className="hero-actions">
               <ExternalButton href={BUY_URL}>Buy $CATO <ArrowUpRight /></ExternalButton>
-              <ExternalButton href="https://t.me/CatOLantern" variant="outline"><Send /> Join Telegram</ExternalButton>
+              <ExternalButton href={DEX_URL} variant="outline"><BarChart3 /> View on DEX</ExternalButton>
             </div>
             <div className="contract-row">
               <div>
@@ -176,7 +181,7 @@ function Index() {
             <a href="#about" className="scroll-cue">Enter the story <ChevronRight aria-hidden="true" /></a>
           </div>
           <div className="hero-stats page-width" aria-label="Community statistics">
-            <div><small>01</small><strong>75</strong><span>Community members</span></div>
+            <div><small>01</small><strong>186</strong><span>Telegram members</span></div>
             <div><small>02</small><strong>95</strong><span>Token holders</span></div>
             <div><small>03</small><strong>$CATO</strong><span>Forever prowling</span></div>
           </div>
@@ -260,7 +265,8 @@ function Index() {
             <p>Claim your place before the black cat crosses the chain.</p>
             <div className="hero-actions">
               <ExternalButton href={BUY_URL}>Buy on Pump.fun <ArrowUpRight /></ExternalButton>
-              <ExternalButton href="https://x.com/catolanternsol?s=11" variant="outline">Follow on X</ExternalButton>
+              <ExternalButton href={TELEGRAM_URL} variant="outline"><Send /> Join Telegram</ExternalButton>
+              <ExternalButton href={X_URL} variant="outline">Follow on X</ExternalButton>
             </div>
           </div>
         </section>
