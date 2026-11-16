@@ -26,6 +26,7 @@ import brandArtwork from "@/assets/hero-brand.png.asset.json";
 import { Button } from "@/components/ui/button";
 
 const CONTRACT = "GeNwBZWJcWQAkLDdty7geii9xSjtCuga1qE9DDzLpump";
+const EMBER = "BAPYF2kjRBfn9UwBiJRuKZehZkZqCtq4Dcx8huUpump";
 const BUY_URL = `https://pump.fun/coin/${CONTRACT}`;
 const DEX_URL = "https://dexscreener.com/solana/8gcu12ppfgqcrjdncjck1j29zd5hhsuueu7puu3plhvc";
 const TELEGRAM_URL = "https://t.me/CatOLantern";
@@ -170,7 +171,7 @@ function Index() {
             </div>
             <div className="contract-row">
               <div>
-                <span>Contract address</span>
+                <span>$CATO Contract address</span>
                 <code>{CONTRACT}</code>
               </div>
               <Button type="button" variant="ghost" size="icon" onClick={copyContract} aria-label="Copy contract address" title="Copy contract address">
@@ -178,12 +179,21 @@ function Index() {
               </Button>
               <strong aria-live="polite">{copied ? "Copied" : "Solana SPL"}</strong>
             </div>
+            <div className="contract-row">
+              <div>
+                <span>$EMBER Contract address</span>
+                <code>{EMBER_CONTRACT}</code>
+              </div>
+              <Button type="button" variant="ghost" size="icon" onClick={() => {
+                navigator.clipboard.writeText(EMBER_CONTRACT);
+                setCopied(true);
+                window.setTimeout(() => setCopied(false), 1800);
+              }} aria-label="Copy $EMBER contract address" title="Copy $EMBER contract address">
+                {copied ? <Check /> : <Copy />}
+              </Button>
+              <strong aria-live="polite">{copied ? "Copied" : "Solana SPL"}</strong>
+            </div>
             <a href="#about" className="scroll-cue">Enter the story <ChevronRight aria-hidden="true" /></a>
-          </div>
-          <div className="hero-stats page-width" aria-label="Community statistics">
-            <div><small>01</small><strong>186</strong><span>Telegram members</span></div>
-            <div><small>02</small><strong>95</strong><span>Token holders</span></div>
-            <div><small>03</small><strong>$CATO</strong><span>Forever prowling</span></div>
           </div>
         </section>
 
