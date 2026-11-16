@@ -182,10 +182,10 @@ function Index() {
             <div className="contract-row">
               <div>
                 <span>$EMBER Contract address</span>
-                <code>{EMBER_CONTRACT}</code>
+                <code>{EMBER}</code>
               </div>
               <Button type="button" variant="ghost" size="icon" onClick={() => {
-                navigator.clipboard.writeText(EMBER_CONTRACT);
+                navigator.clipboard.writeText(EMBER);
                 setCopied(true);
                 window.setTimeout(() => setCopied(false), 1800);
               }} aria-label="Copy $EMBER contract address" title="Copy $EMBER contract address">
