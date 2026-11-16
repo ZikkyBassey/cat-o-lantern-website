@@ -162,7 +162,7 @@ function Index() {
           </div>
           <div className="hero-content page-width">
             <p className="eyebrow hero-kicker"><span aria-hidden="true" /> Live on Solana · Halloween royalty</p>
-            <h1 id="hero-title">THE REAL <span>KING</span><br />OF HALLOWEEN</h1>
+            <h1 id="hero-title">THE <span>CATALYST</span></h1>
             <p className="hero-copy">Every year they carve pumpkins and pretend that's the holiday. Wrong. The real king has always been the black cat.</p>
             <div className="hero-actions">
               <ExternalButton href={BUY_URL}>Buy $CATO <ArrowUpRight /></ExternalButton>
