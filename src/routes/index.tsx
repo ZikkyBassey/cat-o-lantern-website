@@ -56,10 +56,10 @@ const merchItems = [
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "CAT O'LANTERN ($CATO) — The Real King of Halloween" },
+      { title: "CAT O'LANTERN ($CATO) — THE CATALYST" },
       { name: "description", content: "Meet CAT O'LANTERN, the community-driven Halloween token prowling the Solana blockchain." },
       { property: "og:title", content: "CAT O'LANTERN ($CATO)" },
-      { property: "og:description", content: "The real king of Halloween is prowling Solana." },
+      { property: "og:description", content: "THE CATALYST is prowling Solana." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

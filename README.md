@@ -1,6 +1,6 @@
 # CAT O'LANTERN Website
 
-The real king of Halloween - a community-driven Halloween token on Solana.
+THE CATALYST - a community-driven Halloween token on Solana.
 
 ## Development
 

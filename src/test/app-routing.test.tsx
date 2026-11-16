@@ -21,7 +21,7 @@ describe("App routing", () => {
 
     expect(head?.meta).toEqual(
       expect.arrayContaining([
-        expect.objectContaining({ title: "CAT O’LANTERN ($CATO) — The Real King of Halloween" }),
+        expect.objectContaining({ title: "CAT O’LANTERN ($CATO) — THE CATALYST" }),
       ]),
     );
   });
