@@ -27,6 +27,7 @@ import { Button } from "@/components/ui/button";
 
 const CONTRACT = "GeNwBZWJcWQAkLDdty7geii9xSjtCuga1qE9DDzLpump";
 const EMBER = "BAPYF2kjRBfn9UwBiJRuKZehZkZqCtq4Dcx8huUpump";
+const LUNA = "coming_soon";
 const BUY_URL = `https://pump.fun/coin/${CONTRACT}`;
 const DEX_URL = "https://dexscreener.com/solana/8gcu12ppfgqcrjdncjck1j29zd5hhsuueu7puu3plhvc";
 const TELEGRAM_URL = "https://t.me/CatOLantern";
@@ -169,29 +170,38 @@ function Index() {
               <ExternalButton href={BUY_URL}>Buy $CATO <ArrowUpRight /></ExternalButton>
               <ExternalButton href={DEX_URL} variant="outline"><BarChart3 /> View on DEX</ExternalButton>
             </div>
-            <div className="contract-row">
-              <div>
-                <span>$CATO Contract address</span>
-                <code>{CONTRACT}</code>
+            <div className="coins-grid">
+              <div className="contract-row">
+                <div>
+                  <span>$CATO Contract address</span>
+                  <code>{CONTRACT}</code>
+                </div>
+                <Button type="button" variant="ghost" size="icon" onClick={copyContract} aria-label="Copy contract address" title="Copy contract address">
+                  {copied ? <Check /> : <Copy />}
+                </Button>
+                <strong aria-live="polite">{copied ? "Copied" : "Solana SPL"}</strong>
               </div>
-              <Button type="button" variant="ghost" size="icon" onClick={copyContract} aria-label="Copy contract address" title="Copy contract address">
-                {copied ? <Check /> : <Copy />}
-              </Button>
-              <strong aria-live="polite">{copied ? "Copied" : "Solana SPL"}</strong>
-            </div>
-            <div className="contract-row">
-              <div>
-                <span>$EMBER Contract address</span>
-                <code>{EMBER}</code>
+              <div className="contract-row">
+                <div>
+                  <span>$EMBER Contract address</span>
+                  <code>{EMBER}</code>
+                </div>
+                <Button type="button" variant="ghost" size="icon" onClick={() => {
+                  navigator.clipboard.writeText(EMBER);
+                  setCopied(true);
+                  window.setTimeout(() => setCopied(false), 1800);
+                }} aria-label="Copy $EMBER contract address" title="Copy $EMBER contract address">
+                  {copied ? <Check /> : <Copy />}
+                </Button>
+                <strong aria-live="polite">{copied ? "Copied" : "Solana SPL"}</strong>
               </div>
-              <Button type="button" variant="ghost" size="icon" onClick={() => {
-                navigator.clipboard.writeText(EMBER);
-                setCopied(true);
-                window.setTimeout(() => setCopied(false), 1800);
-              }} aria-label="Copy $EMBER contract address" title="Copy $EMBER contract address">
-                {copied ? <Check /> : <Copy />}
-              </Button>
-              <strong aria-live="polite">{copied ? "Copied" : "Solana SPL"}</strong>
+              <div className="contract-row">
+                <div>
+                  <span>$LUNA Contract address</span>
+                  <code>Coming soon</code>
+                </div>
+                <strong className="coming-soon">Coming soon</strong>
+              </div>
             </div>
             <a href="#about" className="scroll-cue">Enter the story <ChevronRight aria-hidden="true" /></a>
           </div>

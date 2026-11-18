@@ -521,6 +521,27 @@ h1 span {
   letter-spacing: 0.06em;
 }
 
+.coins-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.coins-grid .contract-row {
+  width: 100%;
+  margin-top: 0;
+}
+
+.coming-soon {
+  color: var(--muted-foreground);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
 .hero-stats { 
   position: absolute; 
   z-index: 3; 
