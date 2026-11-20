@@ -328,59 +328,59 @@ function Index() {
           </div>
           <div className="gallery-grid">
             <article className="gallery-item">
-              <img src="/images/photo_2026-11-16 07.00.12.jpeg" alt="CATO Community artwork 1" loading="lazy" />
+              <img src="/images/photo_2026-11-16%2007.00.12.jpeg" alt="CATO Community artwork 1" loading="lazy" />
               <div className="gallery-overlay"><span>Collection 01</span></div>
             </article>
             <article className="gallery-item">
-              <img src="/images/photo_2026-11-16 07.00.17.jpeg" alt="CATO Community artwork 2" loading="lazy" />
+              <img src="/images/photo_2026-11-16%2007.00.17.jpeg" alt="CATO Community artwork 2" loading="lazy" />
               <div className="gallery-overlay"><span>Collection 01</span></div>
             </article>
             <article className="gallery-item">
-              <img src="/images/photo_2026-11-16 07.00.20.jpeg" alt="CATO Community artwork 3" loading="lazy" />
+              <img src="/images/photo_2026-11-16%2007.00.20.jpeg" alt="CATO Community artwork 3" loading="lazy" />
               <div className="gallery-overlay"><span>Collection 01</span></div>
             </article>
             <article className="gallery-item">
-              <img src="/images/photo_2026-11-16 07.00.23.jpeg" alt="CATO Community artwork 4" loading="lazy" />
+              <img src="/images/photo_2026-11-16%2007.00.23.jpeg" alt="CATO Community artwork 4" loading="lazy" />
               <div className="gallery-overlay"><span>Collection 01</span></div>
             </article>
             <article className="gallery-item">
-              <img src="/images/photo_2026-11-16 07.00.26.jpeg" alt="CATO Community artwork 5" loading="lazy" />
+              <img src="/images/photo_2026-11-16%2007.00.26.jpeg" alt="CATO Community artwork 5" loading="lazy" />
               <div className="gallery-overlay"><span>Collection 01</span></div>
             </article>
             <article className="gallery-item">
-              <img src="/images/photo_2026-11-16 07.00.51.jpeg" alt="CATO Community artwork 6" loading="lazy" />
+              <img src="/images/photo_2026-11-16%2007.00.51.jpeg" alt="CATO Community artwork 6" loading="lazy" />
               <div className="gallery-overlay"><span>Collection 01</span></div>
             </article>
             <article className="gallery-item">
-              <img src="/images/photo_2026-11-16 07.00.53.jpeg" alt="CATO Community artwork 7" loading="lazy" />
+              <img src="/images/photo_2026-11-16%2007.00.53.jpeg" alt="CATO Community artwork 7" loading="lazy" />
               <div className="gallery-overlay"><span>Collection 01</span></div>
             </article>
             <article className="gallery-item">
-              <img src="/images/photo_2026-11-16 07.00.55.jpeg" alt="CATO Community artwork 8" loading="lazy" />
+              <img src="/images/photo_2026-11-16%2007.00.55.jpeg" alt="CATO Community artwork 8" loading="lazy" />
               <div className="gallery-overlay"><span>Collection 01</span></div>
             </article>
             <article className="gallery-item">
-              <img src="/images/photo_2026-11-16 07.00.58.jpeg" alt="CATO Community artwork 9" loading="lazy" />
+              <img src="/images/photo_2026-11-16%2007.00.58.jpeg" alt="CATO Community artwork 9" loading="lazy" />
               <div className="gallery-overlay"><span>Collection 01</span></div>
             </article>
             <article className="gallery-item">
-              <img src="/images/photo_2026-11-20 10.49.56.jpeg" alt="CATO Community artwork 10" loading="lazy" />
+              <img src="/images/photo_2026-11-20%2010.49.56.jpeg" alt="CATO Community artwork 10" loading="lazy" />
               <div className="gallery-overlay"><span>Collection 02</span></div>
             </article>
             <article className="gallery-item">
-              <img src="/images/photo_2026-11-20 10.50.00.jpeg" alt="CATO Community artwork 11" loading="lazy" />
+              <img src="/images/photo_2026-11-20%2010.50.00.jpeg" alt="CATO Community artwork 11" loading="lazy" />
               <div className="gallery-overlay"><span>Collection 02</span></div>
             </article>
             <article className="gallery-item">
-              <img src="/images/photo_2026-11-20 10.50.03.jpeg" alt="CATO Community artwork 12" loading="lazy" />
+              <img src="/images/photo_2026-11-20%2010.50.03.jpeg" alt="CATO Community artwork 12" loading="lazy" />
               <div className="gallery-overlay"><span>Collection 02</span></div>
             </article>
             <article className="gallery-item">
-              <img src="/images/photo_2026-11-20 10.50.07.jpeg" alt="CATO Community artwork 13" loading="lazy" />
+              <img src="/images/photo_2026-11-20%2010.50.07.jpeg" alt="CATO Community artwork 13" loading="lazy" />
               <div className="gallery-overlay"><span>Collection 02</span></div>
             </article>
             <article className="gallery-item">
-              <img src="/images/photo_2026-11-20 10.50.16.jpeg" alt="CATO Community artwork 14" loading="lazy" />
+              <img src="/images/photo_2026-11-20%2010.50.16.jpeg" alt="CATO Community artwork 14" loading="lazy" />
               <div className="gallery-overlay"><span>Collection 02</span></div>
             </article>
           </div>
