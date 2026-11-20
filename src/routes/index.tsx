@@ -209,22 +209,65 @@ function Index() {
 
         <section id="about" className="section page-width">
           <div className="section-heading">
-            <div><p className="eyebrow">Enter the lore</p><h2>Born in the shadows.</h2></div>
-            <p>Not another pumpkin in the patch. CAT O'LANTERN is a community-powered Halloween icon built for the speed of Solana.</p>
+            <div><p className="eyebrow">The Story</p><h2>One Spark. Nine Lives. Infinite Fire.</h2></div>
+            <p>Before the legend, there was a spark. The story of CATO and EMBER is one of creation, connection, and the eternal flame that burns through every season.</p>
           </div>
-          <div className="lore-layout">
-            <div className="image-panel">
-              <img src={graffitiArtwork.url} alt="Graffiti art of a black cat with an orange jack-o'-lantern grin on a black brick wall" loading="lazy" width={784} height={1168} />
-              <div className="image-caption"><span>01 / THE ORIGIN</span><strong>The night belongs to those who see in the dark.</strong></div>
+          
+          <div className="narrative-section">
+            <div className="narrative-block">
+              <h3>🔥 THE CATALYSTS</h3>
+              <p>Before CATO became the King of the Patch, before the nine lives and nine holidays, there was a single flame burning in the darkness.</p>
+              <p>That flame was <strong>EMBER — The Catalysts</strong>.</p>
+              <p>Deep within the pumpkin patch, EMBER's fire awakened CATO, bringing life to the legendary black cat with glowing orange eyes and a jack-o'-lantern grin.</p>
+              <p><strong>EMBER was the spark that started it all.</strong></p>
             </div>
-            <div className="about-grid">
-              {aboutItems.map(({ icon: Icon, title, copy }, index) => (
-                <article className="lore-card" key={title}>
-                  <div className="lore-number">0{index + 1}</div><Icon aria-hidden="true" />
-                  <h3>{title}</h3><p>{copy}</p>
-                </article>
-              ))}
+
+            <div className="narrative-block">
+              <h3>🐱 CATO — The Legend</h3>
+              <p>CATO is Solana's Holiday Moon Cat — the central character of a universe built around nine lives, nine holidays, and an endlessly recurring seasonal adventure.</p>
+              <p>CATO represents the legend, transformation, and the journey through the holidays. As CATO evolves beyond Halloween into legendary characters for every season, EMBER remains by his side, carrying the eternal flame through every celebration.</p>
+              <p><strong>CATO IS THE LEGEND.</strong></p>
             </div>
+
+            <div className="narrative-block">
+              <h3>⚡ EMBER — The Spark</h3>
+              <p>EMBER is The Catalysts — the original spark that awakened CATO and the eternal flame connecting every chapter of his journey.</p>
+              <p>At Thanksgiving, EMBER becomes the warmth of the harvest. At Christmas, he lights the winter hearth. At New Year's, he ignites the fireworks. Through Valentine's Day, Easter, and every holiday that follows, EMBER's fire continues to burn.</p>
+              <p><strong>EMBER REPRESENTS THE BEGINNING, THE ENERGY, AND THE FIRE THAT KEEPS THE LEGEND ALIVE.</strong></p>
+            </div>
+
+            <div className="narrative-block">
+              <h3>🌙 LUNA — Coming Soon</h3>
+              <p>The third character in The CATO Collective awaits. LUNA will complete the trinity, bringing the cycle full circle.</p>
+              <p>More details coming soon.</p>
+            </div>
+          </div>
+
+          <div className="collective-grid">
+            <div className="collective-card">
+              <div className="card-number">01</div>
+              <h4>$CATO</h4>
+              <p className="card-role">The Legend</p>
+              <p>Holiday Moon Cat. Nine lives, nine holidays, one endlessly evolving character.</p>
+            </div>
+            <div className="collective-card">
+              <div className="card-number">02</div>
+              <h4>$EMBER</h4>
+              <p className="card-role">The Spark</p>
+              <p>The Catalysts. Original flame, eternal energy, fire that keeps the legend alive.</p>
+            </div>
+            <div className="collective-card">
+              <div className="card-number">03</div>
+              <h4>$LUNA</h4>
+              <p className="card-role">Coming Soon</p>
+              <p>The third character. The cycle completes. The trinity awakens.</p>
+            </div>
+          </div>
+
+          <div className="core-message">
+            <p className="message-text">CATO may change with every holiday, but EMBER remains the eternal spark behind the legend.</p>
+            <p className="message-subtext">The seasons change. The characters evolve. The story continues. But the original flame never dies.</p>
+            <p className="message-highlight">The CATO Collective — Solana.</p>
           </div>
         </section>
 
@@ -275,6 +318,71 @@ function Index() {
                 </div>
               </article>
             ))}
+          </div>
+        </section>
+
+        <section id="gallery" className="section page-width">
+          <div className="section-heading compact animate-on-scroll">
+            <div><p className="eyebrow">The Collective</p><h2>Community & Creative.</h2></div>
+            <p>The art, the designs, the vision. From concept to reality across the CATO universe.</p>
+          </div>
+          <div className="gallery-grid">
+            <article className="gallery-item">
+              <img src="/images/photo_2026-11-16%2007.00.12.jpeg" alt="CATO Community artwork 1" loading="lazy" />
+              <div className="gallery-overlay"><span>Collection 01</span></div>
+            </article>
+            <article className="gallery-item">
+              <img src="/images/photo_2026-11-16%2007.00.17.jpeg" alt="CATO Community artwork 2" loading="lazy" />
+              <div className="gallery-overlay"><span>Collection 01</span></div>
+            </article>
+            <article className="gallery-item">
+              <img src="/images/photo_2026-11-16%2007.00.20.jpeg" alt="CATO Community artwork 3" loading="lazy" />
+              <div className="gallery-overlay"><span>Collection 01</span></div>
+            </article>
+            <article className="gallery-item">
+              <img src="/images/photo_2026-11-16%2007.00.23.jpeg" alt="CATO Community artwork 4" loading="lazy" />
+              <div className="gallery-overlay"><span>Collection 01</span></div>
+            </article>
+            <article className="gallery-item">
+              <img src="/images/photo_2026-11-16%2007.00.26.jpeg" alt="CATO Community artwork 5" loading="lazy" />
+              <div className="gallery-overlay"><span>Collection 01</span></div>
+            </article>
+            <article className="gallery-item">
+              <img src="/images/photo_2026-11-16%2007.00.51.jpeg" alt="CATO Community artwork 6" loading="lazy" />
+              <div className="gallery-overlay"><span>Collection 01</span></div>
+            </article>
+            <article className="gallery-item">
+              <img src="/images/photo_2026-11-16%2007.00.53.jpeg" alt="CATO Community artwork 7" loading="lazy" />
+              <div className="gallery-overlay"><span>Collection 01</span></div>
+            </article>
+            <article className="gallery-item">
+              <img src="/images/photo_2026-11-16%2007.00.55.jpeg" alt="CATO Community artwork 8" loading="lazy" />
+              <div className="gallery-overlay"><span>Collection 01</span></div>
+            </article>
+            <article className="gallery-item">
+              <img src="/images/photo_2026-11-16%2007.00.58.jpeg" alt="CATO Community artwork 9" loading="lazy" />
+              <div className="gallery-overlay"><span>Collection 01</span></div>
+            </article>
+            <article className="gallery-item">
+              <img src="/images/photo_2026-11-20%2010.49.56.jpeg" alt="CATO Community artwork 10" loading="lazy" />
+              <div className="gallery-overlay"><span>Collection 02</span></div>
+            </article>
+            <article className="gallery-item">
+              <img src="/images/photo_2026-11-20%2010.50.00.jpeg" alt="CATO Community artwork 11" loading="lazy" />
+              <div className="gallery-overlay"><span>Collection 02</span></div>
+            </article>
+            <article className="gallery-item">
+              <img src="/images/photo_2026-11-20%2010.50.03.jpeg" alt="CATO Community artwork 12" loading="lazy" />
+              <div className="gallery-overlay"><span>Collection 02</span></div>
+            </article>
+            <article className="gallery-item">
+              <img src="/images/photo_2026-11-20%2010.50.07.jpeg" alt="CATO Community artwork 13" loading="lazy" />
+              <div className="gallery-overlay"><span>Collection 02</span></div>
+            </article>
+            <article className="gallery-item">
+              <img src="/images/photo_2026-11-20%2010.50.16.jpeg" alt="CATO Community artwork 14" loading="lazy" />
+              <div className="gallery-overlay"><span>Collection 02</span></div>
+            </article>
           </div>
         </section>
 
