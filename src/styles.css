@@ -103,7 +103,7 @@ a {
 }
 
 .page-width { 
-  width: min(1180px, calc(100% - 40px)); 
+  width: min(1400px, calc(100% - 48px)); 
   margin-inline: auto; 
 }
 
@@ -252,7 +252,7 @@ a {
 
 .hero-section { 
   position: relative; 
-  min-height: 840px; 
+  min-height: 680px; 
   display: flex; 
   align-items: center; 
   border-bottom: 1px solid var(--border); 
@@ -523,15 +523,29 @@ h1 span {
 
 .coins-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
   width: 100%;
-  margin-top: 20px;
+  margin-top: 32px;
 }
 
 .coins-grid .contract-row {
   width: 100%;
   margin-top: 0;
+}
+
+@media (max-width: 1200px) {
+  .coins-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .coins-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
 }
 
 .coming-soon {
