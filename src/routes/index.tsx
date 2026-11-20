@@ -321,56 +321,58 @@ function Index() {
           </div>
         </section>
 
-        <section id="gallery" className="section page-width">
-          <div className="section-heading compact animate-on-scroll">
-            <div><p className="eyebrow">The Collective</p><h2>Community & Creative.</h2></div>
-            <p>The art, the designs, the vision. From concept to reality across the CATO universe.</p>
-          </div>
-          <div className="gallery-grid">
-            <article className="gallery-item">
-              <img src="/images/cato-collection-01.jpeg" alt="CATO Community artwork 1" loading="lazy" />
-              <div className="gallery-overlay"><span>Collection 01</span></div>
-            </article>
-            <article className="gallery-item">
-              <img src="/images/cato-collection-02.jpeg" alt="CATO Community artwork 2" loading="lazy" />
-              <div className="gallery-overlay"><span>Collection 01</span></div>
-            </article>
-            <article className="gallery-item">
-              <img src="/images/cato-collection-03.jpeg" alt="CATO Community artwork 3" loading="lazy" />
-              <div className="gallery-overlay"><span>Collection 01</span></div>
-            </article>
-            <article className="gallery-item">
-              <img src="/images/cato-collection-04.jpeg" alt="CATO Community artwork 4" loading="lazy" />
-              <div className="gallery-overlay"><span>Collection 01</span></div>
-            </article>
-            <article className="gallery-item">
-              <img src="/images/cato-collection-05.jpeg" alt="CATO Community artwork 5" loading="lazy" />
-              <div className="gallery-overlay"><span>Collection 01</span></div>
-            </article>
-            <article className="gallery-item">
-              <img src="/images/cato-collection-06.jpeg" alt="CATO Community artwork 6" loading="lazy" />
-              <div className="gallery-overlay"><span>Collection 01</span></div>
-            </article>
-            <article className="gallery-item">
-              <img src="/images/cato-collection-07.jpeg" alt="CATO Community artwork 7" loading="lazy" />
-              <div className="gallery-overlay"><span>Collection 01</span></div>
-            </article>
-            <article className="gallery-item">
-              <img src="/images/cato-collection-08.jpeg" alt="CATO Community artwork 8" loading="lazy" />
-              <div className="gallery-overlay"><span>Collection 01</span></div>
-            </article>
-            <article className="gallery-item">
-              <img src="/images/cato-collection-10.jpeg" alt="CATO Community artwork 9" loading="lazy" />
-              <div className="gallery-overlay"><span>Collection 02</span></div>
-            </article>
-            <article className="gallery-item">
-              <img src="/images/cato-collection-12.jpeg" alt="CATO Community artwork 10" loading="lazy" />
-              <div className="gallery-overlay"><span>Collection 02</span></div>
-            </article>
-            <article className="gallery-item">
-              <img src="/images/cato-collection-14.jpeg" alt="CATO Community artwork 11" loading="lazy" />
-              <div className="gallery-overlay"><span>Collection 02</span></div>
-            </article>
+        <section id="gallery" className="section">
+          <div className="page-width">
+            <div className="section-heading compact animate-on-scroll">
+              <div><p className="eyebrow">The Collective</p><h2>Community & Creative.</h2></div>
+              <p>The art, the designs, the vision. From concept to reality across the CATO universe.</p>
+            </div>
+            <div className="gallery-grid">
+              <article className="gallery-item">
+                <img src="/images/cato-collection-01.jpeg" alt="CATO Community artwork 1" loading="lazy" />
+                <div className="gallery-overlay"><span>Collection 01</span></div>
+              </article>
+              <article className="gallery-item">
+                <img src="/images/cato-collection-02.jpeg" alt="CATO Community artwork 2" loading="lazy" />
+                <div className="gallery-overlay"><span>Collection 01</span></div>
+              </article>
+              <article className="gallery-item">
+                <img src="/images/cato-collection-03.jpeg" alt="CATO Community artwork 3" loading="lazy" />
+                <div className="gallery-overlay"><span>Collection 01</span></div>
+              </article>
+              <article className="gallery-item">
+                <img src="/images/cato-collection-04.jpeg" alt="CATO Community artwork 4" loading="lazy" />
+                <div className="gallery-overlay"><span>Collection 01</span></div>
+              </article>
+              <article className="gallery-item">
+                <img src="/images/cato-collection-05.jpeg" alt="CATO Community artwork 5" loading="lazy" />
+                <div className="gallery-overlay"><span>Collection 01</span></div>
+              </article>
+              <article className="gallery-item">
+                <img src="/images/cato-collection-06.jpeg" alt="CATO Community artwork 6" loading="lazy" />
+                <div className="gallery-overlay"><span>Collection 01</span></div>
+              </article>
+              <article className="gallery-item">
+                <img src="/images/cato-collection-07.jpeg" alt="CATO Community artwork 7" loading="lazy" />
+                <div className="gallery-overlay"><span>Collection 01</span></div>
+              </article>
+              <article className="gallery-item">
+                <img src="/images/cato-collection-08.jpeg" alt="CATO Community artwork 8" loading="lazy" />
+                <div className="gallery-overlay"><span>Collection 01</span></div>
+              </article>
+              <article className="gallery-item">
+                <img src="/images/cato-collection-10.jpeg" alt="CATO Community artwork 9" loading="lazy" />
+                <div className="gallery-overlay"><span>Collection 02</span></div>
+              </article>
+              <article className="gallery-item">
+                <img src="/images/cato-collection-12.jpeg" alt="CATO Community artwork 10" loading="lazy" />
+                <div className="gallery-overlay"><span>Collection 02</span></div>
+              </article>
+              <article className="gallery-item">
+                <img src="/images/cato-collection-14.jpeg" alt="CATO Community artwork 11" loading="lazy" />
+                <div className="gallery-overlay"><span>Collection 02</span></div>
+              </article>
+            </div>
           </div>
         </section>
 
