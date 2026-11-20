@@ -1676,12 +1676,30 @@ h2::after {
   border-radius: 8px;
   background: color-mix(in oklab, var(--card) 60%, transparent);
   transition: all 0.3s ease;
+  animation: narrative-slide-in 0.6s ease-out backwards;
+}
+
+.narrative-block:nth-child(1) { animation-delay: 0.1s; }
+.narrative-block:nth-child(2) { animation-delay: 0.2s; }
+.narrative-block:nth-child(3) { animation-delay: 0.3s; }
+.narrative-block:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes narrative-slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .narrative-block:hover {
   border-color: var(--primary);
   background: color-mix(in oklab, var(--card) 80%, transparent);
   box-shadow: 0 8px 24px color-mix(in oklab, var(--primary) 12%, transparent);
+  transform: translateY(-4px);
 }
 
 .narrative-block h3 {
@@ -1841,17 +1859,44 @@ h2::after {
   border: 1px solid var(--border);
   cursor: pointer;
   transition: all 0.3s ease;
+  animation: gallery-fade-in 0.6s ease-out backwards;
+}
+
+.gallery-item:nth-child(1) { animation-delay: 0.05s; }
+.gallery-item:nth-child(2) { animation-delay: 0.1s; }
+.gallery-item:nth-child(3) { animation-delay: 0.15s; }
+.gallery-item:nth-child(4) { animation-delay: 0.2s; }
+.gallery-item:nth-child(5) { animation-delay: 0.25s; }
+.gallery-item:nth-child(6) { animation-delay: 0.3s; }
+.gallery-item:nth-child(7) { animation-delay: 0.35s; }
+.gallery-item:nth-child(8) { animation-delay: 0.4s; }
+.gallery-item:nth-child(9) { animation-delay: 0.45s; }
+.gallery-item:nth-child(10) { animation-delay: 0.5s; }
+.gallery-item:nth-child(11) { animation-delay: 0.55s; }
+.gallery-item:nth-child(12) { animation-delay: 0.6s; }
+.gallery-item:nth-child(13) { animation-delay: 0.65s; }
+.gallery-item:nth-child(14) { animation-delay: 0.7s; }
+
+@keyframes gallery-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 .gallery-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .gallery-item:hover img {
-  transform: scale(1.08);
+  transform: scale(1.12) rotate(1deg);
 }
 
 .gallery-overlay {
@@ -1875,6 +1920,18 @@ h2::after {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--primary);
+  animation: slide-up 0.3s ease;
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(8px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @media (max-width: 1024px) {
